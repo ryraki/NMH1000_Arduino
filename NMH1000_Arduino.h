@@ -103,14 +103,6 @@ class NMH1000_Arduino : public I2C_device {
     ~NMH1000_Arduino();
 
     #if DOXYGEN_ONLY
-      /** Get temperature value in degree Celsius [°C] 
-      *
-      *	This method simply calls "temp()" method	
-      *
-      * @return temperature value in degree Celsius [°C] 
-      */
-      virtual float read( void );
-
       /** Ping the device
       *
       * @return true when ACK 
