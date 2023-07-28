@@ -31,9 +31,11 @@ void setup() {
 
 void loop() {
   // Infinite loop of reading magnetic value
-  delay(1000);
+  delay(300);
   int8_t output = nmh1000.read();
-  if (digitalRead(7)) Serial.print("H ");
-  else Serial.print("L ");
+  Serial.print("H/L:");
+  if (digitalRead(7)) Serial.print("10,");
+  else Serial.print("0,");
+  Serial.print("Output:");
   Serial.println(output, DEC);
 }
